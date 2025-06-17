@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nowoczesny Blog</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  </head>
+  <body>
+    <a href="../Index.html" class="back-button">
+      <i class="fas fa-arrow-left"></i> Powrót do strony głównej
+    </a>
+    <div class="Container">
+      <header>
+        <h1>Nowoczesny Blog</h1>
+      </header>
+      <main>
+        <section class="blog-hero">
+          <h2>Witaj na moim blogu!</h2>
+          <p>Inspiracje, nowinki i przemyślenia o web developmencie i nie tylko.</p>
+        </section>
+
+        <!-- SEKCA O AUTORZE -->
+        <section class="blog-author">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Autor" class="author-avatar">
+          <div>
+            <h4>Kacper Kachel</h4>
+            <p>Front-End Developer, pasjonat nowoczesnych technologii, miłośnik kawy i dobrego designu. Na tym blogu dzielę się wiedzą i inspiracjami!</p>
+          </div>
+        </section>
+
+        <!-- SEKCA KATEGORIE -->
+        <section class="blog-categories">
+          <button class="cat-btn active" data-cat="all">Wszystko</button>
+          <button class="cat-btn" data-cat="Front-End">Front-End</button>
+          <button class="cat-btn" data-cat="CSS">CSS</button>
+          <button class="cat-btn" data-cat="Trendy">Trendy</button>
+        </section>
+
+        <section class="blog-list">
+          <article class="blog-card" data-cat="Front-End">
+            <h3>Jak zacząć z React?</h3>
+            <p class="blog-meta">12.06.2024 &bull; Front-End</p>
+            <p>React to obecnie najpopularniejsza biblioteka do budowy interfejsów. Zobacz, jak zacząć swoją przygodę!</p>
+            <a href="#" class="blog-readmore">Czytaj więcej</a>
+          </article>
+          <article class="blog-card" data-cat="CSS">
+            <h3>Dark mode w CSS – prosto i nowocześnie</h3>
+            <p class="blog-meta">10.06.2024 &bull; CSS</p>
+            <p>Dowiedz się, jak w kilku linijkach kodu dodać tryb ciemny do swojej strony.</p>
+            <a href="#" class="blog-readmore">Czytaj więcej</a>
+          </article>
+          <article class="blog-card" data-cat="Trendy">
+            <h3>AI w codziennej pracy programisty</h3>
+            <p class="blog-meta">08.06.2024 &bull; Trendy</p>
+            <p>Czy sztuczna inteligencja zastąpi programistów? Moje przemyślenia i praktyczne przykłady.</p>
+            <a href="#" class="blog-readmore">Czytaj więcej</a>
+          </article>
+        </section>
+        <div class="blog-more-wrap">
+          <button id="blog-more-btn">
+            <span class="btn-text">Pokaż więcej</span>
+            <span class="btn-loader"></span>
+          </button>
+        </div>
+      </main>
+    </div>
+    <script src="../js/main.js"></script>
+    <script src="../js/blog.js"></script>
+  </body>
+</html> 

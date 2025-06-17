@@ -1,0 +1,113 @@
+.todo-hero {
+  text-align: center;
+  margin-bottom: 36px;
+  padding: 24px 0 10px 0;
+}
+.todo-hero h2 {
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  font-size: 2.2rem;
+  background: linear-gradient(90deg, #11998e, #38ef7d, #43cea2, #11998e);
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 6s linear infinite;
+  margin-bottom: 18px;
+  letter-spacing: 2px;
+}
+#todo-form {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+#todo-input {
+  padding: 10px 18px;
+  border-radius: 20px;
+  border: 2px solid #38ef7d;
+  font-size: 1.1rem;
+  font-family: 'Inter', Arial, sans-serif;
+  outline: none;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  transition: border 0.2s;
+}
+#todo-input:focus {
+  border: 2px solid #11998e;
+}
+#todo-form button {
+  background: linear-gradient(90deg, #38ef7d, #43cea2, #11998e);
+  background-size: 200% auto;
+  color: #18191a;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 24px;
+  font-size: 1.1rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-position 0.5s, color 0.2s;
+  box-shadow: 0 2px 12px rgba(67,206,162,0.12);
+}
+#todo-form button:hover {
+  background-position: 100% 0;
+  color: #11998e;
+}
+.todo-list {
+  list-style: none;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 0;
+}
+.todo-item {
+  background: linear-gradient(90deg, rgba(56,239,125,0.10), rgba(67,206,162,0.10));
+  border-radius: 16px;
+  margin-bottom: 14px;
+  padding: 16px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 1.13rem;
+  color: #eaeaea;
+  border: 1.5px solid #38ef7d;
+  box-shadow: 0 2px 12px rgba(56,239,125,0.07);
+  opacity: 0;
+  transform: translateY(30px) scale(0.98);
+  transition: 
+    opacity 0.5s cubic-bezier(.77,0,.18,1), 
+    transform 0.5s cubic-bezier(.77,0,.18,1);
+}
+.todo-item.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+.todo-item.done {
+  text-decoration: line-through;
+  color: #43cea2;
+  opacity: 0.7;
+}
+.todo-actions {
+  display: flex;
+  gap: 10px;
+}
+.todo-btn {
+  background: none;
+  border: none;
+  color: #38ef7d;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.2s;
+  border-radius: 50%;
+  padding: 4px 8px;
+}
+.todo-btn:hover {
+  color: #fff;
+  background: #38ef7d;
+}
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+} 

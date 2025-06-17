@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&family=Montserrat:wght@400;600;900&display=swap');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  min-height: 100vh;
+  color: #eaeaea;
+  background: linear-gradient(135deg, #232526 0%, #18191a 100%);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Delikatny wzór w tle */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.18;
+  pointer-events: none;
+  background: url("data:image/svg+xml;utf8,<svg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='60' height='60' fill='white' fill-opacity='0.03'/><circle cx='30' cy='30' r='28' stroke='white' stroke-width='2' stroke-opacity='0.08'/></svg>");
+  background-repeat: repeat;
+  background-size: 120px 120px;
+  filter: blur(1.5px);
+}
+
+.Container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: rgba(30, 30, 30, 0.82);
+  border-radius: 22px;
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.28);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+  border: 2px solid rgba(255,255,255,0.10);
+  backdrop-filter: blur(10px);
+}
+
+/* --- NAGŁÓWKI: Bebas Neue --- */
+header h1,
+.section h2,
+.card h3 {
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  letter-spacing: 2px;
+  color: #fff;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3.2rem;
+  margin-bottom: 8px;
+  background: linear-gradient(90deg, #f5f6fa, #bdbdbd);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section h2 {
+  font-size: 2.1rem;
+  margin-bottom: 16px;
+  
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* --- OPISY: Inter --- */
+header p,
+.section p,
+.card p,
+footer {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 1.13rem;
+  color: #eaeaea;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0.1px;
+  
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: #eaeaea;
+  text-decoration: none;
+  margin: 0 18px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.2s, border-bottom 0.2s;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  letter-spacing: 1px;
+}
+
+nav a:hover {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+
+main {
+  flex: 1;
+  padding: 32px 24px;
+}
+
+.section {
+  margin-bottom: 40px;
+  background: rgba(50, 50, 50, 0.60);
+  border-radius: 18px;
+  padding: 28px 22px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.09);
+  border: 1.5px solid rgba(255,255,255,0.10);
+}
+
+.cards {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: rgba(80,80,80,0.16);
+  border: 2px solid rgba(255,255,255,0.13);
+  border-radius: 18px;
+  box-shadow: 0 2px 18px rgba(0,0,0,0.13);
+  padding: 28px 22px;
+  width: 250px;
+  text-align: left;
+  color: #fff;
+  text-decoration: none;
+  transition: 
+    transform 0.18s, 
+    box-shadow 0.18s, 
+    border 0.18s,
+    background 0.18s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.04) rotate(-1deg);
+  box-shadow: 0 8px 32px 0 rgba(255,255,255,0.13);
+  border: 2px solid #fff;
+  background: rgba(255,255,255,0.10);
+}
+
+footer {
+  background: rgba(40, 40, 40, 0.7);
+  color: #bdbdbd;
+  text-align: center;
+  padding: 16px 0;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  border-top: 1.5px solid rgba(255,255,255,0.08);
+  box-shadow: 0 -2px 12px 0 rgba(0,0,0,0.08);
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+@media (max-width: 800px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 90%;
+  }
+  .Container {
+    margin: 10px;
+  }
+  main {
+    padding: 18px 6px;
+  }
+}
+
+/* Back button styles */
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: #2196f3;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1000;
+}
+
+.back-button:hover {
+    background: #1976d2;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.back-button i {
+    font-size: 1.1rem;
+}
+
+/* Responsive adjustments for back button */
+@media (max-width: 768px) {
+    .back-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}

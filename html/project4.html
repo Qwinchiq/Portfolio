@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/weather.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css' rel='stylesheet' />
+  </head>
+  <body>
+    <a href="../Index.html" class="back-button">
+      <i class="fas fa-arrow-left"></i> Powrót do strony głównej
+    </a>
+    <div class="Container">
+      <header>
+        <h1>Weather Dashboard</h1>
+        <p class="subtitle">Sprawdź aktualną pogodę i prognozę na najbliższe dni</p>
+      </header>
+
+      <main class="weather-dashboard">
+        <div class="search-container">
+          <div class="search-wrapper">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="city-input" placeholder="Wpisz nazwę miasta..." value="Warszawa" />
+          </div>
+          <button id="search-btn">
+            <i class="fas fa-search"></i>
+            <span>Szukaj</span>
+          </button>
+        </div>
+
+        <div class="weather-container">
+          <div class="current-weather">
+            <div class="weather-info">
+              <div class="city-info">
+                <h2 id="city-name">Warszawa</h2>
+                <span class="last-update">Ostatnia aktualizacja: <span id="update-time">--:--</span></span>
+              </div>
+              <div class="temperature">
+                <span id="current-temp">--</span>°C
+              </div>
+              <div class="weather-description" id="weather-desc">
+                <i class="fas fa-cloud-sun"></i>
+                <span>Ładna pogoda</span>
+              </div>
+            </div>
+            <div class="weather-details">
+              <div class="detail">
+                <i class="fas fa-wind"></i>
+                <div class="detail-info">
+                  <span class="detail-label">Prędkość wiatru</span>
+                  <span id="wind-speed">-- km/h</span>
+                </div>
+              </div>
+              <div class="detail">
+                <i class="fas fa-tint"></i>
+                <div class="detail-info">
+                  <span class="detail-label">Wilgotność</span>
+                  <span id="humidity">--%</span>
+                </div>
+              </div>
+              <div class="detail">
+                <i class="fas fa-compress-arrows-alt"></i>
+                <div class="detail-info">
+                  <span class="detail-label">Ciśnienie</span>
+                  <span id="pressure">-- hPa</span>
+                </div>
+              </div>
+            </div>
+            <div class="additional-info">
+              <div class="info-item">
+                <i class="fas fa-sun"></i>
+                <span>Wschód: <span id="sunrise">--:--</span></span>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-moon"></i>
+                <span>Zachód: <span id="sunset">--:--</span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="forecast-container">
+            <div class="forecast-header">
+              <h3>Prognoza na 5 dni</h3>
+            </div>
+            <div class="forecast-cards" id="forecast-cards">
+              <!-- Forecast cards will be added here by JavaScript -->
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="../js/weather.js"></script>
+  </body>
+</html> 

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria Zdjęć</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  </head>
+  <body>
+    <a href="../Index.html" class="back-button">
+      <i class="fas fa-arrow-left"></i> Powrót do strony głównej
+    </a>
+    <div class="Container">
+      <header>
+        <h1>Galeria Zdjęć</h1>
+      </header>
+      <main>
+        <section class="gallery-hero">
+          <h2>Moje ulubione kadry</h2>
+          <p>Kliknij na zdjęcie, aby je powiększyć!</p>
+        </section>
+        <section class="gallery-grid">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Las" class="gallery-img">
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Góry" class="gallery-img">
+          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Plaża" class="gallery-img">
+          <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=400&q=80" alt="Miasto" class="gallery-img">
+        </section>
+      </main>
+    </div>
+    <div id="lightbox" class="lightbox">
+      <img src="" alt="Powiększone zdjęcie" id="lightbox-img">
+    </div>
+    <script src="../js/gallery.js"></script>
+  </body>
+</html> 
